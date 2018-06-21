@@ -7,15 +7,10 @@ class App < Sinatra::Base
     erb :user_input
   end
 
-#  post '/piglatinize' do
-#    "200 status code"
-#
-#    erb :piglatinize
-#  end
-
   post '/piglatinize' do
     @piglatin_text = PigLatinizer.new.piglatinize(params[:user_phrase])
       "200 status code"
+
     erb :piglatinize
   end
 
